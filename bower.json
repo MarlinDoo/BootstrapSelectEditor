@@ -1,0 +1,28 @@
+{
+  "name": "BootstrapSelectEditor",
+  "version": "0.0.1",
+  "authors": [
+    "garydong@outlook.com"
+  ],
+  "description": "A select editor with Bootstrap select style for Backbone-form",
+  "main": "select.js",
+  "keywords": [
+    "Bootstrap",
+    "Backbone-form",
+    "Editor",
+    "Select"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone-forms": "~0.14.0",
+    "bootstrap": "~3.3.1",
+    "backbone": "~1.1.2"
+  }
+}

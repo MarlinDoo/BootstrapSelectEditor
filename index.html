@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Select Editor</title>
+
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css" />
+    <style type="text/css">
+    #main{width: 600px;margin:50px auto;background: white;}
+    </style>
+  </head>
+  <body>
+
+  <header id="header">Bootstrap Select</header>
+
+  <main id="main" class="main"> </main>
+
+  <footer id="footer"></footer>
+
+  <script src="./bower_components/jquery/dist/jquery.js"></script>
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="./bower_components/underscore/underscore.js"></script>
+  <script src="./bower_components/backbone/backbone.js"></script>
+  <script src="./bower_components/backbone-forms/distribution/backbone-forms.js"></script>
+  <script src="./bower_components/backbone-forms/distribution/templates/bootstrap3.js"></script>
+  <script src="./bower_components/backbone-forms/distribution/editors/list.js"></script>
+  <script src="scripts/select.js"></script>
+
+  <script type="text/javascript">
+  $(function(){
+
+    var form = new Backbone.Form({
+      //Schema
+      schema: {
+        id:         'Number',
+        name:       'Text',
+        // title:   {type:'BootstrapSelect', options:['Mr', 'Mrs', 'Ms']}
+        // title:   {type:'BootstrapSelect', options:[{label:'Mr',val:'Mr'},{label:'Mrs',val:'Mrs'},{label:'Ms',val:'Ms'}]}
+        title:   {type:'BootstrapSelect', options: new Backbone.Collection([{label:'Mr',val:'Mr'},{label:'Mrs',val:'Mrs'},{label:'Ms',val:'Ms'}])}
+      },
+      //Data to populate the form with
+      data: {
+        id: 123,
+        name: 'Rod Kimble',
+        title: 'Mr'
+      }
+   }).render();
+   $('#main').html(form.$el)
+  });
+  </script>
+
+  </body>
+</html>
