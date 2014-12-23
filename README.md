@@ -30,7 +30,7 @@ Similar to the backbone-form select, Can be any of:
 * A function that calls back with one of the above
 * An object e.g. { y: 'Yes', n: 'No' }
 
-
+`
     var form = new Backbone.Form({
       //Schema
       schema: {
@@ -45,3 +45,5 @@ Similar to the backbone-form select, Can be any of:
         title: 'Mr'
       }
     }).render();
+
+`
