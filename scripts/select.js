@@ -39,8 +39,8 @@ Form.editors.BootstrapSelect = Form.editors.Select.extend({
     var options = this.schema.options,
         curaction;
     if(options instanceof Backbone.Collection){
-      if(!value) value = options.at(0).get('label');
-      curaction = options.findWhere({val:value}).get('label');
+      if(!value) value = options.at(0).id;
+      curaction = options.get(value).get('label');
     }else if (_.isArray(options) || _.isObject(options)){
       if(!value) value = options[0].val;
       if(typeof(options[0].val)=='number') value=parseInt(value);
