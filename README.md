@@ -30,19 +30,23 @@ Similar to the backbone-form select, Can be any of:
 * A function that calls back with one of the above
 * An object e.g. { y: 'Yes', n: 'No' }
 
+
 `
-var form = new Backbone.Form({
-  //Schema
-  schema: {
-    id:         'Number',
-    name:       'Text',
-    title:   {type:'BootstrapSelect', options:['Mr', 'Mrs', 'Ms']}
-  },
-  //Data to populate the form with
-  data: {
-    id: 123,
-    name: 'Rod Kimble',
-    title: 'Mr'
-  }
-}).render();
+
+    var form = new Backbone.Form({
+    
+      //Schema
+      schema: {
+        id:         'Number',
+        name:       'Text',
+        title:   {type:'BootstrapSelect', options:['Mr', 'Mrs', 'Ms']}
+      },
+      //Data to populate the form with
+      data: {
+        id: 123,
+        name: 'Rod Kimble',
+        title: 'Mr'
+      }
+    }).render();
+    
 `
